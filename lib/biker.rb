@@ -10,6 +10,10 @@ class Biker
     @rides = {}
     @acceptable_terrain = []
   end
+
+  def learn_terrain!(terrain)
+    @acceptable_terrain << terrain
+  end
 end
 
 # binding.pry

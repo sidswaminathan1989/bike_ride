@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-RSpec.describe Bike do
+RSpec.describe Biker do
     before(:each) do
         @biker = Biker.new("Kenny", 30)
     end
 
     describe '#initialize' do
         it 'can initialize' do
-            expect(@ride1).to be_an_instance_of(Ride)
+            expect(@biker).to be_an_instance_of(Biker)
             expect(@ride1.name).to eq("Walnut Creek Trail")
             expect(@ride1.distance).to eq(10.7)
             expect(@ride1.terrain).to eq(:hills)

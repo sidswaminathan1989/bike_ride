@@ -8,9 +8,10 @@ RSpec.describe Biker do
     describe '#initialize' do
         it 'can initialize' do
             expect(@biker).to be_an_instance_of(Biker)
-            expect(@ride1.name).to eq("Walnut Creek Trail")
-            expect(@ride1.distance).to eq(10.7)
-            expect(@ride1.terrain).to eq(:hills)
+            expect(@biker.name).to eq("Kenny")
+            expect(@biker.max_distance).to eq(30)
+            expect(@biker.rides).to eq({})
+            expect(@biker.acceptable_terrain).to eq([])
         end
     end
 

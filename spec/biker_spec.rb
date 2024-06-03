@@ -35,10 +35,14 @@ RSpec.describe Biker do
         end
     end
 
-    # describe '#total_distance' do
-    #     it 'can report its total distance' do
-    #         expect(@ride1.total_distance()).to eq(21.4)
-    #         expect(@ride2.total_distance()).to eq(14.9)
-    #     end
-    # end
+    describe '#log_ride' do
+        it 'can log a ride with a time and can keep track of all of its previous rides and times for those rides' do
+            @biker.log_ride(@ride1, 92.5)
+            @biker.log_ride(@ride1, 91.1)
+            @biker.log_ride(@ride2, 60.9)
+            @biker.log_ride(@ride2, 61.6)
+            expect(@biker.rides[@ride1]).to eq([92.5, 91.1])
+            expect(@biker.rides[@ride2]).to eq([60.9, 61.6])
+        end
+    end
 end

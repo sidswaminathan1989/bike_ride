@@ -1,2 +1,2 @@
 require 'pry'
-require './lib/bike.rb'
+require './lib/ride.rb'

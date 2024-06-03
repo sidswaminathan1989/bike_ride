@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Bike do
+RSpec.describe Ride do
     before(:each) do
         @ride1 = Ride.new({
             name: "Walnut Creek Trail", 
@@ -19,17 +19,17 @@ RSpec.describe Bike do
 
     describe '#initialize' do
         it 'can initialize' do
-            expect(@ride1).to be_an_instance_of(Bike)
-            expect(@ride1.name).to be("Walnut Creek Trail")
-            expect(@ride1.distance).to be(10.7)
-            expect(@ride1.terrain).to be(:hills)
+            expect(@ride1).to be_an_instance_of(Ride)
+            expect(@ride1.name).to eq("Walnut Creek Trail")
+            expect(@ride1.distance).to eq(10.7)
+            expect(@ride1.terrain).to eq(:hills)
         end
     end
 
     describe '#loop?' do
         it 'can indicate if the ride is a loop or not' do
-            expect(@ride1.loop?()).to be(false)
-            expect(@ride2.loop?()).to be(true)
+            expect(@ride1.loop?()).to eq(false)
+            expect(@ride2.loop?()).to eq(true)
         end
     end
 
